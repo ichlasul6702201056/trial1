@@ -44,6 +44,14 @@ class CustomDrawer extends StatelessWidget {
             },
           ),
           ListTile(
+            leading: Icon(Icons.view_comfy_alt_rounded),
+            title: Text('Converter'),
+            onTap: () {
+              Navigator.of(context).pop();
+              context.replace('/converter');
+            },
+          ),
+          ListTile(
             leading: Icon(Icons.contacts_rounded),
             title: Text('Contact'),
             onTap: () {

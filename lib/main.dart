@@ -9,6 +9,7 @@ import 'package:trial1/screens/calculator/calc_home.dart';
 import 'package:trial1/screens/chat/chat_home.dart';
 import 'package:trial1/screens/common/login.dart';
 import 'package:trial1/screens/contact/contact_home.dart';
+import 'package:trial1/screens/converter/converter_home.dart';
 import 'package:trial1/screens/login/login_main.dart';
 import 'package:trial1/screens/setting.dart';
 import 'package:trial1/screens/vid/vid_home.dart';
@@ -107,6 +108,14 @@ final GoRouter _router = GoRouter(
           path: 'calc',
           builder: (BuildContext context, GoRouterState state) {
             return CalcHome();
+          },
+        ),
+
+        // converter
+        GoRoute(
+          path: 'converter',
+          builder: (BuildContext context, GoRouterState state) {
+            return ConverterHome();
           },
         ),
 

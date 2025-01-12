@@ -71,7 +71,8 @@ class _ChatHomeState extends State<ChatHome> {
       try {
         await _firestore.collection('chat').add({
           'content': _controller.text,
-          'sender': user.uid,
+          // 'sender': user.uid,
+          'sender': "anonymous",
           'time': FieldValue.serverTimestamp(),
         });
         _controller.clear();
