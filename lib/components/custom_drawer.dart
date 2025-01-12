@@ -35,6 +35,30 @@ class CustomDrawer extends StatelessWidget {
               context.replace('/vid/home');
             },
           ),
+          ListTile(
+            leading: Icon(Icons.calculate),
+            title: Text('Calculator'),
+            onTap: () {
+              Navigator.of(context).pop();
+              context.replace('/calc');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.contacts_rounded),
+            title: Text('Contact'),
+            onTap: () {
+              Navigator.of(context).pop();
+              context.replace('/contact');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.message),
+            title: Text('Chat'),
+            onTap: () {
+              Navigator.of(context).pop();
+              context.replace('/chat');
+            },
+          ),
           Divider(),
           ListTile(
             leading: Icon(Icons.settings),
@@ -42,6 +66,14 @@ class CustomDrawer extends StatelessWidget {
             onTap: () {
               Navigator.of(context).pop();
               context.push('/setting');
+            },
+          ),
+          ListTile(
+            leading: Icon(Icons.login),
+            title: Text('Login'),
+            onTap: () {
+              Navigator.of(context).pop();
+              context.push('/login');
             },
           ),
         ],

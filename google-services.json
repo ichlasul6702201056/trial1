@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "222642084086",
+    "project_id": "ppbm-e621",
+    "storage_bucket": "ppbm-e621.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:222642084086:android:5e707cf9b6411ae9e3f4d7",
+        "android_client_info": {
+          "package_name": "com.example.trial1"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAqHvW2q5xXf1HejSofKf50u11CR04eb9Y"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
