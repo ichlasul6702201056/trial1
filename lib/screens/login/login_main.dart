@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter_secure_storage/flutter_secure_storage.dart';
 
 class LoginMain extends StatefulWidget {
   @override
@@ -9,14 +10,23 @@ class LoginMain extends StatefulWidget {
 class _LoginMainState extends State<LoginMain> {
   final TextEditingController _emailController = TextEditingController();
   final TextEditingController _passwordController = TextEditingController();
+  final FlutterSecureStorage _secureStorage = FlutterSecureStorage();
   bool _isPasswordVisible = false;
 
   Future<void> _signIn() async {
     try {
-      await FirebaseAuth.instance.signInWithEmailAndPassword(
+      UserCredential userCredential =
+          await FirebaseAuth.instance.signInWithEmailAndPassword(
         email: _emailController.text,
         password: _passwordController.text,
       );
+
+      // Store the user's credentials securely
+      await _secureStorage.write(key: 'email', value: _emailController.text);
+      await _secureStorage.write(
+          key: 'password', value: _passwordController.text);
+
+      print('User signed in: ${userCredential.user?.uid}');
     } catch (e) {
       print('Error signing in: $e');
     }
